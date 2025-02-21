@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="calendar.css" />
+    <script type="module" src="display.js" defer></script>
+</head>
+<body>
+    <h1>Calendar</h1>
+
+    <div class="credentials">
+        <div>First Name: <span id="loggedUserFName"></span></div>
+        <div>Last Name: <span id="loggedUserLName"></span></div>
+        <div>Email: <span id="loggedUserEmail"></span></div>
+        <button id="logout">Logout</button>
+    </div>
+
+    <div class="main-container">
+
+        <div class="calendar">
+            <div class="month">
+                <div class="prevMonth">Prev Month</div>
+                <div class="currMonth">January 1970</div>
+                <div class="nextMonth">Next Month</div>
+            </div>
+
+            <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+
+            <div class="days"></div>
+
+            <div class="goto-today">
+                <div class="goto">
+                    <input type="month" class="month-input" />
+                    <button class="goto-btn">Go</button>
+                </div>
+
+                <button class="today-btn">Today</button>
+            </div>
+        </div>
+
+        <div class="events-section">
+            <div class="today-date">
+                <div class="event-day">Thu</div>
+                <div class="event-date">01 - 01 - 1970</div>
+            </div>
+
+            <div class="events"></div>
+            <!--
+            this section is talking about how to format display for event adding 
+            Normal Users: 
+                Display the entire roster of doctors: 
+                    [User's name, status]
+                    sorting is by name (Alphabet) or 
+                                status (On, ReqOn, ReqOff, OffConfirmed)
+                Button: Request On (Take On A Shift) 
+                Button: Request Off (Take Day Off) 
+                If click on user with a Request Off: 
+                    User with Request Off is granted Day Off after a 
+                        confirmation prompt 
+                //Finalized scheduling is done by the administrator 
+                User specific link: 
+                    if user is nonadmin, go to the normal user / display
+                    if user is admin, go to the admin page variant display
+            -->
+            <div class="requests">
+                <button class="request-off">Request Off</button>
+                <button class="request-on">Request On</button>
+            </div>
+
+            <!--
+            Administrator: only accessible by user privileges/specific link
+                Display the entire roster of doctors 
+                    [User's name, status]
+                    sorting is by name (Alphabet) or 
+                                status (On, ReqOn, ReqOff, OffConfirmed)
+                If click on user: 2 buttons - Give Shift | Give Day Off
+                Button: Lock in schedule - nonadmin users will be unable to 
+                        have thier status changed unless by admin
+                Button: add more people to On 
+                    display Roster List of people who are not request, 
+                                On, or confirmed
+                    check box that when button will be pressed, 
+                            will set those user status to n
+                Go back to user link: goes back to normal user / display 
+
+
+            -->
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+
+
+<!--
+Calendar is the Left Side 
+use basis of the tutorial: says, prev and next, goto, today 
+
+User information, logout, showing shifts, requests, offs on Right Side 
+Show user info on top 
+Logout button top right corner 
+events shows list of people into 2 Columns: on and off
+NOTE TO SELF: in the back end find a way to have the requests on respective sides 
+                be put on top of list 
+Options on click day: request on, request off 
+            (if request active cannot make request)
+Options on self on request day event: cancel request 
+Options on click other request day event: confirm swap request followup 
+                    with popup for confirm again button 
+
+
+-->

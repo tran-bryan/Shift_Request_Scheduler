@@ -1,0 +1,86 @@
+body{
+    width: 100%;
+}
+.credentials{
+    width: 300px;
+    text-align: center;
+    border: 1px solid #ffffff;
+}
+.credentials div{
+    display: block;
+}
+.main-container{
+    display: flex;
+}
+.calendar{
+    position: relative;
+    width: 700px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid #ffffff;
+}
+.calendar .month{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.calendar .weekdays{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.calendar .weekdays div {
+  width: 98px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff;
+}
+.calendar .days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+  }
+.calendar .days .day {
+    width: 98px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ffffff;
+}
+
+.calendar .days .active {
+    color: #ffff00;
+    font-size: 2rem;
+    background-color: #ff00ff;
+}
+
+.calendar .goto-today{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.events-section{
+    position: relative;
+    width: 700px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid #ffffff;
+}
+.events-section .today-date{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
